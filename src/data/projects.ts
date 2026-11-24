@@ -15,13 +15,11 @@ export type Project = {
   featured: boolean;
   github?: string;
   live?: string;
-  video?: string;
   badge?: string;
   badgeAr?: string;
 };
 
 export const projects: Project[] = [
-  // TODO: add screenshots for Sada
   {
     id: "sada",
     title: "Sada (صدى) — Multi-Agent Audience Intelligence Platform",
@@ -98,11 +96,9 @@ export const projects: Project[] = [
     category: "ai",
     featured: true,
     github: "https://github.com/ShahadBusaleh/YusrAgent",
-    // TODO: add Yusor demo video URL (set `video`; the card shows a "Demo video" link once it exists)
     badge: "Completed — Bootcamp Capstone",
     badgeAr: "مكتمل — مشروع تخرج المعسكر",
   },
-  // TODO: add Travel-In demo video or screenshots (live deployment is down, link removed)
   {
     id: "travel-in",
     title: "Travel-In — AI Travel Concierge",
@@ -265,7 +261,6 @@ export const projects: Project[] = [
       "ميزات مجتمعية للقراء: التصفح والتقييم والتعليقات ومتابعة الكُتّاب، إضافة إلى تصميم أغلفة الكتب بالذكاء الاصطناعي",
       "مبني بـ Flutter وFirebase للتطوير الجوال متعدد المنصات",
     ],
-    // TODO: confirm stack
     stack: ["Flutter", "Dart", "Firebase", "OpenAI API"],
     category: "mobile",
     featured: false,
