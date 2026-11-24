@@ -49,7 +49,13 @@ export function Hero() {
             className="hero-animate mx-auto max-w-2xl text-lg leading-relaxed text-brand-cream/85 lg:mx-0"
             style={{ animationDelay: "320ms" }}
           >
-            {locale === "en" ? profile.summary : profile.summaryAr}
+            {locale === "en" ? profile.tagline : profile.taglineAr}
+          </p>
+          <p
+            className="hero-animate mx-auto max-w-2xl text-sm font-medium leading-relaxed text-brand-cream/75 lg:mx-0"
+            style={{ animationDelay: "370ms" }}
+          >
+            {locale === "en" ? profile.highlights : profile.highlightsAr}
           </p>
 
           <div

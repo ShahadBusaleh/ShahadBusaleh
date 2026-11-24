@@ -4,46 +4,38 @@ import { useLanguage } from "./LanguageProvider";
 import { ui } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
 
-const experience = [
-  {
-    en: {
-      role: "AI Committee Member (Volunteer)",
-      company: "SDC | Saudi Developers Community",
-      period: "Sep 2026 – Present",
-      points: [
-        "Translate AI and tech research into accessible content for the developer community",
-      ],
-    },
-    ar: {
-      role: "عضوة لجنة الذكاء الاصطناعي (تطوع)",
-      company: "SDC | المجتمع السعودي للمطورين",
-      period: "سبتمبر 2026 – حاليًا",
-      points: [
-        "ترجمة أبحاث الذكاء الاصطناعي والتقنية إلى محتوى مفهوم لمجتمع المطورين",
-      ],
-    },
-  },
+type ExperienceEntry = {
+  role: string;
+  company: string;
+  period: string;
+  intro?: string;
+  points: string[];
+};
+
+const experience: { en: ExperienceEntry; ar: ExperienceEntry }[] = [
   {
     en: {
       role: "Software Developer, Trainee (Tamheer)",
       company: "Khalifa A. Algosaibi Group, Dammam",
       period: "Dec 2025 – Jun 2026",
+      intro:
+        "Built internal AI and workflow systems for the Group's IT department, taking each from the business need to a deployed tool.",
       points: [
-        "Built the IT equipment management system (ASP.NET Core MVC, EF Core, SQL Server)",
-        "Built a web-based meeting recording, analysis, and reporting platform on a local open-source AI model, eliminating subscription costs and improving data privacy",
-        "Customized the iTop ITSM system for ticket workflows and asset tracking",
-        "Automated reporting",
+        "AI Meeting Assistant: privacy-first transcription, AI summaries and formal minutes on a local LLM (LM Studio), no third-party cloud; integrated into the corporate IT portal with Microsoft Entra ID SSO and Microsoft Graph; replaced the need for a paid transcription subscription",
+        "IT Equipment Issuance System: digitized a manual process into a Preparer → Issuer → Receiver approval workflow with email notifications, bilingual PDF forms, and security controls (CSRF, XSS/SQL injection prevention); deployed on IIS",
+        "iTop ITSM: added two-level approvals and email notifications",
       ],
     },
     ar: {
       role: "مطورة برمجيات، متدربة (تمهير)",
       company: "مجموعة خليفة أ. القصيبي، الدمام",
       period: "ديسمبر 2025 – يونيو 2026",
+      intro:
+        "بنيتُ أنظمة ذكاء اصطناعي وسير عمل داخلية لإدارة تقنية المعلومات في المجموعة، وأخذتُ كل نظام من حاجة العمل حتى أداة منشورة.",
       points: [
-        "بناء نظام إدارة معدات IT (ASP.NET Core MVC وEF Core وSQL Server)",
-        "بناء منصة ويب لتسجيل الاجتماعات وتحليلها وإعداد التقارير عنها باستخدام نموذج ذكاء اصطناعي محلي مفتوح المصدر، ما ألغى تكاليف الاشتراكات وحسّن خصوصية البيانات",
-        "تخصيص نظام iTop ITSM لسير عمل التذاكر وتتبع الأصول",
-        "أتمتة التقارير",
+        "مساعد الاجتماعات الذكي: نسخ صوتي يضع الخصوصية أولًا، وملخصات بالذكاء الاصطناعي ومحاضر رسمية عبر نموذج لغوي محلي (LM Studio) دون أي سحابة لطرف ثالث؛ مدمج في بوابة IT المؤسسية مع تسجيل دخول موحد عبر Microsoft Entra ID وMicrosoft Graph؛ وأغنى عن الحاجة إلى اشتراك مدفوع في خدمة نسخ",
+        "نظام صرف معدات IT: رقمنة عملية يدوية إلى سير موافقات (مُعِدّ → مُصدِر → مُستلِم) مع إشعارات بالبريد الإلكتروني، ونماذج PDF ثنائية اللغة، وضوابط أمنية (CSRF، ومنع XSS وحقن SQL)؛ منشور على IIS",
+        "iTop ITSM: إضافة موافقات على مستويين وإشعارات بالبريد الإلكتروني",
       ],
     },
   },
@@ -53,9 +45,10 @@ const experience = [
       company: "IAU, Deanship of Scientific Research & Innovation",
       period: "Aug 2025 – Jan 2026",
       points: [
-        "Fixed backend issues in an ASP.NET Core MVC research-management system",
-        "Implemented full Arabic–English localization with .resx and culture middleware",
-        "Optimized queries with EF Core and LINQ",
+        "Fixed backend issues across routing, file uploads, and database interactions",
+        "Implemented full Arabic ↔ English localization (.resx + culture middleware)",
+        "Improved workflow-state and search logic with EF Core migrations and optimized LINQ",
+        "Enhanced Razor views and multi-role workflow handling",
       ],
     },
     ar: {
@@ -63,9 +56,10 @@ const experience = [
       company: "جامعة الإمام عبدالرحمن بن فيصل — عمادة البحث العلمي والابتكار",
       period: "أغسطس 2025 – يناير 2026",
       points: [
-        "إصلاح مشاكل الخلفية في نظام إدارة البحوث المبني بـ ASP.NET Core MVC",
-        "تنفيذ تعريب كامل عربي–إنجليزي عبر ملفات .resx وculture middleware",
-        "تحسين الاستعلامات باستخدام EF Core وLINQ",
+        "إصلاح مشاكل الخلفية في التوجيه (Routing) ورفع الملفات والتعامل مع قاعدة البيانات",
+        "تنفيذ تعريب كامل عربي ↔ إنجليزي (ملفات .resx + culture middleware)",
+        "تحسين منطق حالة سير العمل والبحث عبر ترحيلات EF Core واستعلامات LINQ محسّنة",
+        "تحسين واجهات Razor ومعالجة سير العمل متعدد الأدوار",
       ],
     },
   },
@@ -75,8 +69,8 @@ const experience = [
       company: "GAC Saudi Arabia, Dammam",
       period: "Jun 2025 – Aug 2025",
       points: [
-        "Analyzed 10 months of IT ticket data and built dashboards",
-        "Handled daily IT support tickets",
+        "Analyzed 10 months of IT support tickets, cleaned inconsistent data, built Tableau dashboards, and presented resource-planning recommendations to IT operations",
+        "Resolved daily tickets for end-user devices, printers, and IP telephones",
       ],
     },
     ar: {
@@ -84,8 +78,8 @@ const experience = [
       company: "GAC السعودية، الدمام",
       period: "يونيو 2025 – أغسطس 2025",
       points: [
-        "تحليل 10 أشهر من بيانات تذاكر IT وبناء لوحات معلومات",
-        "معالجة تذاكر الدعم الفني اليومية",
+        "تحليل 10 أشهر من تذاكر الدعم الفني، وتنظيف البيانات غير المتسقة، وبناء لوحات Tableau، وتقديم توصيات تخطيط الموارد لفريق عمليات IT",
+        "حل التذاكر اليومية لأجهزة المستخدمين والطابعات وهواتف IP",
       ],
     },
   },
@@ -116,6 +110,11 @@ export function Experience() {
                   </p>
                   <p className="text-sm text-brand-teal">{data.company}</p>
                   <p className="mb-3 text-xs text-zinc-500">{data.period}</p>
+                  {data.intro && (
+                    <p className="mb-3 text-sm leading-relaxed text-zinc-700">
+                      {data.intro}
+                    </p>
+                  )}
                   <ul className="space-y-1.5">
                     {data.points.map((point) => (
                       <li
