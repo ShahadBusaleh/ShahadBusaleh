@@ -77,17 +77,6 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
             <span aria-hidden>→</span>
           </a>
         )}
-        {project.video && (
-          <a
-            href={project.video}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-teal transition-colors hover:text-brand-teal-dark"
-          >
-            {t.viewVideo}
-            <span aria-hidden>→</span>
-          </a>
-        )}
         {project.github && (
           <a
             href={project.github}

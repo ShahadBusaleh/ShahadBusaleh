@@ -23,7 +23,6 @@ export const ui = {
   en: {
     viewProject: "View on GitHub",
     viewLive: "Live demo",
-    viewVideo: "Demo video",
     about: "About",
     skills: "Skills",
     featuredWork: "Featured Work",
@@ -48,7 +47,6 @@ export const ui = {
   ar: {
     viewProject: "عرض على GitHub",
     viewLive: "عرض مباشر",
-    viewVideo: "فيديو العرض",
     about: "عني",
     skills: "المهارات",
     featuredWork: "أبرز الأعمال",
