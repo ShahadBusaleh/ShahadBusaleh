@@ -15,7 +15,7 @@ type ExperienceEntry = {
 const experience: { en: ExperienceEntry; ar: ExperienceEntry }[] = [
   {
     en: {
-      role: "Software Developer, Trainee (Tamheer)",
+      role: "Software Developer · Apprenticeship (Tamheer)",
       company: "Khalifa A. Algosaibi Group, Dammam",
       period: "Dec 2025 – Jun 2026",
       intro:
@@ -27,7 +27,7 @@ const experience: { en: ExperienceEntry; ar: ExperienceEntry }[] = [
       ],
     },
     ar: {
-      role: "مطورة برمجيات، متدربة (تمهير)",
+      role: "مطورة برمجيات · تدريب مهني (تمهير)",
       company: "مجموعة خليفة أ. القصيبي، الدمام",
       period: "ديسمبر 2025 – يونيو 2026",
       intro:
@@ -41,7 +41,7 @@ const experience: { en: ExperienceEntry; ar: ExperienceEntry }[] = [
   },
   {
     en: {
-      role: ".NET Web Developer, Trainee (Volunteer)",
+      role: ".NET Web Developer · Internship (Volunteer)",
       company: "IAU, Deanship of Scientific Research & Innovation",
       period: "Aug 2025 – Jan 2026",
       points: [
@@ -52,7 +52,7 @@ const experience: { en: ExperienceEntry; ar: ExperienceEntry }[] = [
       ],
     },
     ar: {
-      role: "مطورة ويب .NET، متدربة (تطوع)",
+      role: "مطورة ويب .NET · تدريب تطوعي",
       company: "جامعة الإمام عبدالرحمن بن فيصل — عمادة البحث العلمي والابتكار",
       period: "أغسطس 2025 – يناير 2026",
       points: [
@@ -65,7 +65,7 @@ const experience: { en: ExperienceEntry; ar: ExperienceEntry }[] = [
   },
   {
     en: {
-      role: "IT Trainee (COOP)",
+      role: "IT Trainee · Internship (Co-op)",
       company: "GAC Saudi Arabia, Dammam",
       period: "Jun 2025 – Aug 2025",
       points: [
@@ -74,7 +74,7 @@ const experience: { en: ExperienceEntry; ar: ExperienceEntry }[] = [
       ],
     },
     ar: {
-      role: "متدربة IT (برنامج تعاوني)",
+      role: "متدربة IT · تدريب تعاوني",
       company: "GAC السعودية، الدمام",
       period: "يونيو 2025 – أغسطس 2025",
       points: [
