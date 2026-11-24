@@ -6,7 +6,6 @@ export const profile = {
   location: "Eastern Province, Saudi Arabia",
   locationAr: "المنطقة الشرقية، المملكة العربية السعودية",
   email: "shahadbusaleh753@gmail.com",
-  phone: "",
   links: {
     github: "https://github.com/ShahadBusaleh",
     linkedin: "https://www.linkedin.com/in/shahadbusaleh/",
