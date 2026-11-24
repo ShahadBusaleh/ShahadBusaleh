@@ -18,12 +18,13 @@ const notoArabic = Noto_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "Shahad Busaleh — AI Application Developer",
+  title: "Shahad Busaleh — AI Product Builder",
   description:
-    "Portfolio of Shahad Busaleh — AI Application Developer building LLM-integrated products, agentic AI systems, and enterprise applications.",
+    "Portfolio of Shahad Busaleh — AI Product Builder turning business needs into shipped AI products, from multi-agent systems to enterprise tools.",
   keywords: [
     "Shahad Busaleh",
-    "AI Application Developer",
+    "AI Product Builder",
+    "AI Product",
     "Agentic AI",
     "Multi-Agent Systems",
     "LangChain",
@@ -35,9 +36,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Shahad Busaleh" }],
   openGraph: {
-    title: "Shahad Busaleh — AI Application Developer",
+    title: "Shahad Busaleh — AI Product Builder",
     description:
-      "AI-powered applications, agentic AI systems, a 1st-place travel platform, and enterprise integrations.",
+      "I turn business needs into shipped AI products — from multi-agent systems to enterprise tools.",
     type: "website",
   },
 };

@@ -7,14 +7,17 @@ import { Reveal } from "./Reveal";
 
 const skillGroups = [
   {
-    key: "frontend" as const,
-    labelEn: "Front-End & Mobile",
-    labelAr: "واجهات أمامية وتطبيقات جوال",
+    key: "productAi" as const,
+    labelEn: "Product & AI",
+    labelAr: "المنتج والذكاء الاصطناعي",
   },
-  { key: "backend" as const, labelEn: "Back-End", labelAr: "خلفية" },
-  { key: "ai" as const, labelEn: "AI & Integration", labelAr: "ذكاء اصطناعي" },
-  { key: "cloud" as const, labelEn: "Cloud & Tools", labelAr: "سحابة وأدوات" },
-  { key: "data" as const, labelEn: "Data", labelAr: "بيانات" },
+  { key: "engineering" as const, labelEn: "Engineering", labelAr: "الهندسة" },
+  { key: "data" as const, labelEn: "Data", labelAr: "البيانات" },
+  {
+    key: "cloudSecurity" as const,
+    labelEn: "Cloud & Security",
+    labelAr: "السحابة والأمان",
+  },
 ];
 
 export function Skills() {
@@ -31,7 +34,7 @@ export function Skills() {
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-brand-cream" />
         </Reveal>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2">
           {skillGroups.map((group, index) => (
             <Reveal key={group.key} delay={index * 70}>
               <div className="rounded-2xl border border-brand-cream/10 bg-brand-teal/50 p-6">

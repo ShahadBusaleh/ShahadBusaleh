@@ -12,32 +12,45 @@ const education = {
 const training = {
   en: {
     title: "Agentic AI Bootcamp — SDA & WeCloudData",
-    period: "Aug 2026 – Oct 2026 · Completed",
+    period: "Completed — Oct 2026",
     description:
       "Full-time intensive program covering Python & ML fundamentals, GenAI, LLM evaluation, prompt engineering, RAG, LangChain, agent memory and planning, multi-agent orchestration, guardrails and safety, and agent observability. Capstone: Yusor, a bilingual multi-agent HR assistant.",
   },
   ar: {
     title: "معسكر Agentic AI — SDA وWeCloudData",
-    period: "أغسطس 2026 – أكتوبر 2026 · مكتمل",
+    period: "مكتمل — أكتوبر 2026",
     description:
       "برنامج تدريبي مكثف بدوام كامل يغطي أساسيات Python والتعلم الآلي، والذكاء الاصطناعي التوليدي، وتقييم النماذج اللغوية، وهندسة الأوامر، وRAG، وLangChain، وذاكرة الوكلاء وتخطيطهم، وتنسيق الوكلاء المتعددين، والضوابط والسلامة، ومراقبة أداء الوكلاء. مشروع التخرج: يُسر، مساعد موارد بشرية متعدد الوكلاء ثنائي اللغة.",
   },
 };
 
-const certifications = [
-  "Agentic AI — Saudi Digital Academy (2026)",
-  "Power BI Bootcamp — Qafza Tech (2026)",
-  "Azure AI Fundamentals — Microsoft",
-  "Prerequisite Courses of Artificial Intelligence, Python Basics — Coursera",
-  "ChatGPT Prompt Engineering for Developers — DeepLearning.AI",
-  "Chatbot Development with IBM Watson Assistant — IBM SkillsBuild",
-  "Code Generation & Optimization Using IBM Granite — IBM SkillsBuild",
-  "Vibe Coding 101 with Replit — DeepLearning.AI",
-  "Vibe Coding with Cursor AI — Coursera",
-  "Git Essentials — Satr Platform",
-  "Software Security Testing — IPA-Ethrai",
-  "Data Analysis Essentials — Cisco Networking Academy (NetAcad)",
-];
+const certifications = {
+  en: [
+    "Product Management Basics — Pendo (Nov 2026)",
+    "Agentic AI — Saudi Digital Academy (Oct 2026)",
+    "Azure AI Fundamentals — Microsoft",
+    "AWS AI Practitioner Learning Path — Completion (SDA)",
+    "Software Security Testing — IPA",
+    "Data Analysis Essentials — Cisco NetAcad",
+    "ChatGPT Prompt Engineering for Developers — DeepLearning.AI",
+    "Vibe Coding 101 with Replit — DeepLearning.AI",
+  ],
+  ar: [
+    "Product Management Basics — Pendo (نوفمبر 2026)",
+    "Agentic AI — الأكاديمية السعودية الرقمية (أكتوبر 2026)",
+    "Azure AI Fundamentals — Microsoft",
+    "AWS AI Practitioner Learning Path — شهادة إتمام (SDA)",
+    "Software Security Testing — IPA",
+    "Data Analysis Essentials — Cisco NetAcad",
+    "ChatGPT Prompt Engineering for Developers — DeepLearning.AI",
+    "Vibe Coding 101 with Replit — DeepLearning.AI",
+  ],
+};
+
+const community = {
+  en: "AI Committee Member, Saudi Developers Community (SDC) — co-presented the 'ويب بلا حدود' AI web-building workshop (Nov 2026).",
+  ar: "عضوة لجنة الذكاء الاصطناعي، المجتمع السعودي للمطورين (SDC) — شاركتُ في تقديم ورشة «ويب بلا حدود» لبناء مواقع الويب بالذكاء الاصطناعي (نوفمبر 2026).",
+};
 
 export function About() {
   const { locale } = useLanguage();
@@ -87,7 +100,7 @@ export function About() {
                 {t.certifications}
               </h3>
               <ul className="space-y-2">
-                {certifications.map((cert) => (
+                {certifications[locale].map((cert) => (
                   <li
                     key={cert}
                     className="text-sm text-zinc-600 before:me-2 before:text-brand-teal before:content-['•']"
@@ -96,6 +109,15 @@ export function About() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-brand-teal-dark">
+                {t.community}
+              </h3>
+              <p className="text-sm leading-relaxed text-zinc-600">
+                {community[locale]}
+              </p>
             </div>
 
             <div>

@@ -15,16 +15,60 @@ export type Project = {
   featured: boolean;
   github?: string;
   live?: string;
+  video?: string;
   badge?: string;
+  badgeAr?: string;
 };
 
 export const projects: Project[] = [
+  // TODO: add screenshots for Sada
+  {
+    id: "sada",
+    title: "Sada (صدى) — Multi-Agent Audience Intelligence Platform",
+    titleAr: "صدى (Sada) — منصة ذكاء الجمهور متعددة الوكلاء",
+    role: "AgentX Hackathon — Backend & AI Agents | Team Project, continued independently",
+    roleAr: "هاكاثون AgentX — الخلفية ووكلاء الذكاء الاصطناعي | مشروع فريق، استكملتُ تطويره بشكل مستقل",
+    description:
+      "A multi-agent AI platform that turns audience data from the Saudi Broadcasting Authority's official YouTube, X and Instagram accounts into content decisions: what to publish, where, when, and why a post over- or under-performed. Live Arabic (RTL) dashboard.",
+    descriptionAr:
+      "منصة ذكاء اصطناعي متعددة الوكلاء تحوّل بيانات الجمهور من حسابات هيئة الإذاعة والتلفزيون الرسمية على YouTube وX وInstagram إلى قرارات محتوى: ماذا يُنشر، وأين، ومتى، ولماذا تفوّق منشور على المتوقع أو قصّر عنه. لوحة معلومات عربية (RTL) مباشرة.",
+    highlights: [
+      "7 agents sharing one database and pattern store: Data Collector, Behavior Analysis, Content Optimizer, Trend & Viral Prediction, Alerts & Diagnosis, Audience Analysis, Live Clip Detection (prototype on a simulated signal)",
+      "Real data: 15K+ posts from 19 official accounts (incl. 7.7K YouTube videos with ~95M views) and 2.5K audience comments; no author data stored",
+      "Evidence-first: every pattern cites its sample size and t-test; diagnoses link to real comparable posts and never invent a cause",
+      "Saudi-dialect audience analysis: 94% agreement with blind human labels",
+      "My role — Hackathon: backend, AI agents, and platform API integration (YouTube, X, Instagram). After the hackathon, I continued development independently: production deployment (Render + Supabase Postgres), Supabase Auth, multi-tenant data isolation, Alembic migrations, and CI on SQLite and Postgres.",
+    ],
+    highlightsAr: [
+      "7 وكلاء يتشاركون قاعدة بيانات واحدة ومخزن أنماط: جامع البيانات، وتحليل السلوك، ومحسّن المحتوى، والتنبؤ بالترند والانتشار، والتنبيهات والتشخيص، وتحليل الجمهور، واكتشاف المقاطع المباشرة (نموذج أولي على إشارة محاكاة)",
+      "بيانات حقيقية: أكثر من 15 ألف منشور من 19 حسابًا رسميًا (منها 7.7 ألف فيديو على YouTube بنحو 95 مليون مشاهدة) و2.5 ألف تعليق من الجمهور؛ دون تخزين أي بيانات عن أصحابها",
+      "الدليل أولًا: كل نمط يذكر حجم العينة واختبار t، والتشخيصات ترتبط بمنشورات حقيقية مماثلة ولا تختلق سببًا أبدًا",
+      "تحليل الجمهور باللهجة السعودية: توافق بنسبة 94% مع تصنيفات بشرية معمّاة",
+      "دوري — في الهاكاثون: الخلفية، ووكلاء الذكاء الاصطناعي، وتكامل واجهات المنصات البرمجية (YouTube وX وInstagram). بعد الهاكاثون واصلتُ التطوير بشكل مستقل: النشر في بيئة الإنتاج (Render + Supabase Postgres)، وSupabase Auth، وعزل بيانات متعدد المستأجرين (Multi-tenant)، وترحيلات Alembic، والتكامل المستمر (CI) على SQLite وPostgres.",
+    ],
+    stack: [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "Pydantic",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Gemini",
+      "GitHub Actions",
+    ],
+    category: "ai",
+    featured: true,
+    badge: "AgentX Hackathon Finalist (3rd Edition)",
+    badgeAr: "متأهلة لنهائي هاكاثون AgentX (النسخة الثالثة)",
+  },
   {
     id: "yusor",
     title: "Yusor — Bilingual Multi-Agent HR Assistant",
     titleAr: "يُسر — مساعد موارد بشرية متعدد الوكلاء ثنائي اللغة",
-    role: "Agentic AI Bootcamp Capstone (SDA & WeCloudData) — Repo Owner & Evaluation Lead | Team of 4",
-    roleAr: "مشروع تخرج معسكر Agentic AI (SDA و WeCloudData) — مالكة المستودع وقائدة التقييم | فريق من 4",
+    role: "Agentic AI Bootcamp Capstone (SDA & WeCloudData) — Repo Owner | Team of 4",
+    roleAr: "مشروع تخرج معسكر Agentic AI (SDA و WeCloudData) — مالكة المستودع | فريق من 4",
     description:
       "An Arabic/English HR assistant that answers from the HR database and Saudi Labor Law, cites its sources, verifies every answer before the user sees it, and keeps risky actions under human approval.",
     descriptionAr:
@@ -32,105 +76,33 @@ export const projects: Project[] = [
     highlights: [
       "Orchestrator, HR, Consultant and Manager agents, plus specialists for regulation updates, decision briefs, CV parsing and growth plans",
       "Hybrid RAG (Qdrant + BM25 + Reciprocal Rank Fusion) over 176 policy and Labor Law documents, with cited sources",
-      "Results: Ragas faithfulness 0.94, context recall 0.91, 54/54 golden cases and 158 unit tests passing",
-      "My role: owned the repository and team work split, led the evaluation harness (Ragas + LLM-as-judge), built the Growth Agent and the initial API backend",
+      "Results: Ragas faithfulness 0.94, context recall 0.91, 54/54 golden test cases, 158 unit tests passing",
+      "My role: Owned the repository, coordinated how work was split across a team of four, co-led the evaluation harness (Ragas + LLM-as-judge), built the Arabic experience, Team Insights, and the payroll feature, and curated the policy knowledge base.",
     ],
     highlightsAr: [
       "وكلاء المنسّق والموارد البشرية والمستشار والمدير، إضافة إلى وكلاء متخصصين لتحديثات الأنظمة وملخصات القرار وتحليل السير الذاتية وخطط النمو",
       "RAG هجين (Qdrant + BM25 + Reciprocal Rank Fusion) على 176 وثيقة سياسات ونظام عمل، مع ذكر المصادر",
-      "النتائج: Ragas faithfulness بنسبة 0.94، وcontext recall بنسبة 0.91، ونجاح 54/54 حالة مرجعية و158 اختبار وحدة",
-      "دوري: ملكية المستودع وتوزيع العمل على الفريق، وقيادة منظومة التقييم (Ragas + LLM-as-judge)، وبناء وكيل خطط النمو والواجهة البرمجية الأولية",
+      "النتائج: Ragas faithfulness بنسبة 0.94، وcontext recall بنسبة 0.91، ونجاح 54/54 حالة اختبار مرجعية، ونجاح 158 اختبار وحدة",
+      "دوري: ملكية المستودع، وتنسيق توزيع العمل على فريق من أربعة، والمشاركة في قيادة منظومة التقييم (Ragas + LLM-as-judge)، وبناء التجربة العربية وميزة رؤى الفريق (Team Insights) وميزة الرواتب، وإعداد قاعدة معرفة السياسات.",
     ],
     stack: [
       "Python",
       "FastAPI",
       "Streamlit",
       "Qdrant",
-      "sentence-transformers",
+      "BM25 hybrid RAG",
       "Groq LLM",
-      "Ragas",
       "SQLite",
       "Docker",
     ],
     category: "ai",
     featured: true,
     github: "https://github.com/ShahadBusaleh/YusrAgent",
-    badge: "Capstone",
+    // TODO: add Yusor demo video URL (set `video`; the card shows a "Demo video" link once it exists)
+    badge: "Completed — Bootcamp Capstone",
+    badgeAr: "مكتمل — مشروع تخرج المعسكر",
   },
-  {
-    id: "sada",
-    title: "Sada — AI Audience Engagement Platform",
-    titleAr: "صدى — منصة ذكاء اصطناعي لتفاعل الجمهور",
-    role: "AgentX Hackathon — AI Agent & Backend Developer | Team Project",
-    roleAr: "هاكاثون AgentX — مطورة وكلاء الذكاء الاصطناعي والخلفية | مشروع فريق",
-    description:
-      "A multi-agent platform that helps the Saudi Broadcasting Authority's content teams decide what to publish, on which channel, and when, based on real audience engagement data, shown on a live Arabic (RTL) dashboard.",
-    descriptionAr:
-      "منصة متعددة الوكلاء تساعد فرق المحتوى في هيئة الإذاعة والتلفزيون على تحديد ماذا تنشر، وعلى أي قناة، ومتى، بناءً على بيانات تفاعل جمهور حقيقية، وتعرضها في لوحة عربية مباشرة.",
-    highlights: [
-      "Developed the AI agents and FastAPI backend: behavior analysis, content optimization, trend prediction, anomaly diagnosis and audience analysis",
-      "Integrated YouTube Data API v3, X API v2 and Instagram Graph API within fixed quota and cost budgets",
-      "Real data from 9 official SBA YouTube channels: 7,777 videos and ~95M views over 180 days",
-      "Measured, not assumed: sentiment checked against blind human labels, trend predictions backtested against a baseline, every recommendation linked to its evidence",
-    ],
-    highlightsAr: [
-      "تطوير وكلاء الذكاء الاصطناعي وخلفية FastAPI: تحليل السلوك، وتحسين المحتوى، والتنبؤ بالترند، وتشخيص الحالات الشاذة، وتحليل الجمهور",
-      "تكامل YouTube Data API v3 وX API v2 وInstagram Graph API ضمن حدود ثابتة للحصص والتكلفة",
-      "بيانات حقيقية من 9 قنوات يوتيوب رسمية للهيئة: 7,777 فيديو ونحو 95 مليون مشاهدة خلال 180 يومًا",
-      "نتائج مقاسة: تحليل المشاعر مُقارن بتصنيفات بشرية مستقلة، والتنبؤات مختبرة مقابل خط أساس، وكل توصية مرتبطة بدليلها",
-    ],
-    stack: [
-      "Python",
-      "FastAPI",
-      "Google Gemini",
-      "PostgreSQL",
-      "SQLAlchemy",
-      "React",
-      "TypeScript",
-      "YouTube Data API",
-      "X API",
-      "Instagram Graph API",
-    ],
-    category: "ai",
-    featured: true,
-    github: "https://github.com/DaleenMilibari/Sada",
-    badge: "AgentX Hackathon",
-  },
-  {
-    id: "meeting-assistant",
-    title: "AI Meeting Assistant",
-    titleAr: "مساعد الاجتماعات الذكي",
-    role: "Enterprise Integration & Full-Stack Delivery",
-    roleAr: "تكامل مؤسسي وتطوير Full Stack",
-    description:
-      "Enterprise web app for recording meetings, live transcription, AI summaries, formal meeting minutes documents, PDF export, and Microsoft Graph email — integrated into a corporate IT portal with Entra ID SSO via YARP reverse proxy.",
-    descriptionAr:
-      "تطبيق مؤسسي لتسجيل الاجتماعات والنسخ المباشر والملخصات بالذكاء الاصطناعي ومحاضر الاجتماعات الرسمية وتصدير PDF والبريد عبر Microsoft Graph — مدمج في بوابة IT مع تسجيل دخول موحد عبر YARP.",
-    highlights: [
-      "Two-server Windows architecture: ASP.NET portal + Next.js/FastAPI stack",
-      "SSO without second login — YARP injects X-User headers from Entra ID",
-      "Local LM Studio summarization with browser-side transcription path",
-      "Production troubleshooting: 502 gateway, transcript persistence, template routing",
-    ],
-    highlightsAr: [
-      "بنية Windows ثنائية الخوادم: بوابة ASP.NET + Next.js/FastAPI",
-      "تسجيل دخول موحد بدون تسجيل ثانٍ عبر YARP و Entra ID",
-      "تلخيص محلي عبر LM Studio مع مسار نسخ في المتصفح",
-      "حل مشاكل إنتاج: 502، حفظ النصوص، مسارات القوالب",
-    ],
-    stack: [
-      "Next.js",
-      "FastAPI",
-      "ASP.NET",
-      "YARP",
-      "LM Studio",
-      "SQLite",
-      "MS Graph",
-    ],
-    category: "enterprise",
-    featured: true,
-    badge: "Production",
-  },
+  // TODO: add Travel-In demo video or screenshots (live deployment is down, link removed)
   {
     id: "travel-in",
     title: "Travel-In — AI Travel Concierge",
@@ -169,8 +141,44 @@ export const projects: Project[] = [
     ],
     category: "ai",
     featured: true,
-    live: "https://travelin.blog/",
     badge: "1st Place",
+    badgeAr: "المركز الأول",
+  },
+  {
+    id: "meeting-assistant",
+    title: "AI Meeting Assistant",
+    titleAr: "مساعد الاجتماعات الذكي",
+    role: "Enterprise Integration & Full-Stack Delivery",
+    roleAr: "تكامل مؤسسي وتطوير Full Stack",
+    description:
+      "Enterprise web app for recording meetings, live transcription, AI summaries, formal meeting minutes documents, PDF export, and Microsoft Graph email — integrated into a corporate IT portal with Entra ID SSO via YARP reverse proxy.",
+    descriptionAr:
+      "تطبيق مؤسسي لتسجيل الاجتماعات والنسخ المباشر والملخصات بالذكاء الاصطناعي ومحاضر الاجتماعات الرسمية وتصدير PDF والبريد عبر Microsoft Graph — مدمج في بوابة IT مع تسجيل دخول موحد عبر YARP.",
+    highlights: [
+      "Two-server Windows architecture: ASP.NET portal + Next.js/FastAPI stack",
+      "SSO without second login — YARP injects X-User headers from Entra ID",
+      "Local LM Studio summarization with browser-side transcription path",
+      "Production troubleshooting: 502 gateway, transcript persistence, template routing",
+    ],
+    highlightsAr: [
+      "بنية Windows ثنائية الخوادم: بوابة ASP.NET + Next.js/FastAPI",
+      "تسجيل دخول موحد بدون تسجيل ثانٍ عبر YARP و Entra ID",
+      "تلخيص محلي عبر LM Studio مع مسار نسخ في المتصفح",
+      "حل مشاكل إنتاج: 502، حفظ النصوص، مسارات القوالب",
+    ],
+    stack: [
+      "Next.js",
+      "FastAPI",
+      "ASP.NET",
+      "YARP",
+      "LM Studio",
+      "SQLite",
+      "MS Graph",
+    ],
+    category: "enterprise",
+    featured: true,
+    badge: "Production",
+    badgeAr: "قيد التشغيل",
   },
   {
     id: "equipment",
@@ -204,6 +212,7 @@ export const projects: Project[] = [
     category: "enterprise",
     featured: false,
     badge: "Enterprise",
+    badgeAr: "مؤسسي",
   },
   {
     id: "research-mission",
@@ -247,16 +256,17 @@ export const projects: Project[] = [
     descriptionAr:
       "منصة جوال مدعومة بالذكاء الاصطناعي تساعد الكُتّاب على توليد الأفكار وتطوير الشخصيات والحصول على ملاحظات نحوية وأسلوبية وتصميم أغلفة الكتب، بينما يمكن للقراء تصفح الأعمال المنشورة وتقييمها ومناقشتها ضمن مجتمع مشترك. أُنجز كمشروع تخرج لبكالوريوس نظم المعلومات الحاسوبية في جامعة الإمام عبدالرحمن بن فيصل.",
     highlights: [
-      "AI-assisted writing tools — idea generation, character development, and grammar/style enhancement — powered by OpenAI and Gemini APIs",
+      "AI-assisted writing tools — idea generation, character development, and grammar/style enhancement — powered by the OpenAI API",
       "Reader community features: browsing, ratings, comments, and following authors, plus AI-assisted book cover design",
-      "Built with Flutter for cross-platform mobile delivery and an ASP.NET Core backend with a relational database",
+      "Built with Flutter and Firebase for cross-platform mobile delivery",
     ],
     highlightsAr: [
-      "أدوات كتابة مدعومة بالذكاء الاصطناعي — توليد الأفكار، وتطوير الشخصيات، وتحسين القواعد والأسلوب — عبر واجهتي OpenAI وGemini",
+      "أدوات كتابة مدعومة بالذكاء الاصطناعي — توليد الأفكار، وتطوير الشخصيات، وتحسين القواعد والأسلوب — عبر واجهة OpenAI البرمجية",
       "ميزات مجتمعية للقراء: التصفح والتقييم والتعليقات ومتابعة الكُتّاب، إضافة إلى تصميم أغلفة الكتب بالذكاء الاصطناعي",
-      "مبني بـ Flutter للتطوير الجوال متعدد المنصات وخلفية ASP.NET Core مع قاعدة بيانات علائقية",
+      "مبني بـ Flutter وFirebase للتطوير الجوال متعدد المنصات",
     ],
-    stack: ["Flutter", "Dart", "ASP.NET Core", "SQL Server", "Firebase", "OpenAI API"],
+    // TODO: confirm stack
+    stack: ["Flutter", "Dart", "Firebase", "OpenAI API"],
     category: "mobile",
     featured: false,
   },
@@ -287,49 +297,38 @@ export const projects: Project[] = [
 ];
 
 export const skills = {
-  frontend: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "Flutter",
-    "Dart",
-  ],
-  backend: [
-    "Python",
-    "C#",
-    "Java",
-    "PHP",
-    "C++",
-    "ASP.NET Core",
-    "Node.js",
-    "FastAPI",
-    "REST APIs",
-  ],
-  ai: [
-    "OpenAI API",
-    "Google Gemini AI",
-    "LM Studio",
+  productAi: [
+    "Product Management",
+    "Agentic AI",
+    "Multi-Agent Systems",
+    "RAG",
+    "LLMs",
+    "LLM Evaluation",
     "Prompt Engineering",
-    "Multi-Agent System Design",
-    "Agent Guardrails & Observability",
-    "LLM Evaluation (Ragas, LLM-as-judge)",
-    "RAG (Hybrid: Qdrant + BM25)",
+    "AI Integration",
     "LangChain",
+    "Workflow Automation",
   ],
-  cloud: [
-    "Microsoft Azure",
-    "Git",
-    "GitHub",
+  engineering: [
+    "Python",
+    "FastAPI",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "ASP.NET Core",
+    "C#",
+    "Entity Framework Core",
+    "REST APIs",
+    "Microsoft Graph",
     "Docker",
-    "PowerShell",
-    "IIS",
-    "Clerk Auth",
-    "MS Graph",
-    "Firebase",
+    "Git",
+    "Flutter",
   ],
-  data: ["SQL", "Tableau", "Power BI", "Pandas", "EF Core"],
+  data: ["SQL", "PostgreSQL", "SQL Server", "Qdrant", "Tableau", "Power BI", "Pandas"],
+  cloudSecurity: [
+    "Microsoft Azure",
+    "Supabase",
+    "Render",
+    "Software Security Testing",
+  ],
 };

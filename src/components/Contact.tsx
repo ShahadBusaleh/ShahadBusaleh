@@ -26,8 +26,8 @@ export function Contact() {
           <div className="mx-auto mt-4 mb-8 h-1 w-16 rounded-full bg-brand-teal" />
           <p className="mb-10 text-zinc-600">
             {locale === "en"
-              ? "Open to full-stack and AI application roles. Let's connect."
-              : "متاحة لفرص Full Stack وتطبيقات الذكاء الاصطناعي. لنتواصل."}
+              ? "Open to AI Product, Technical Product, and AI Engineering roles in Saudi Arabia. Let's connect."
+              : "متاحة لفرص منتجات الذكاء الاصطناعي، والمنتجات التقنية، وهندسة الذكاء الاصطناعي في المملكة العربية السعودية. لنتواصل."}
           </p>
         </Reveal>
 

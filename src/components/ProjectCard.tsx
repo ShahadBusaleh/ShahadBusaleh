@@ -29,7 +29,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
       <div className="mb-4 flex flex-wrap items-center gap-2">
         {project.badge && (
           <span className="rounded-full bg-brand-teal px-3 py-1 text-xs font-semibold text-brand-cream">
-            {project.badge}
+            {locale === "ar" && project.badgeAr ? project.badgeAr : project.badge}
           </span>
         )}
         <span className="rounded-full bg-brand-cream/60 px-3 py-1 text-xs font-medium text-brand-teal-dark">
@@ -74,6 +74,17 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
             className="inline-flex items-center gap-2 text-sm font-semibold text-brand-teal transition-colors hover:text-brand-teal-dark"
           >
             {t.viewLive}
+            <span aria-hidden>→</span>
+          </a>
+        )}
+        {project.video && (
+          <a
+            href={project.video}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-teal transition-colors hover:text-brand-teal-dark"
+          >
+            {t.viewVideo}
             <span aria-hidden>→</span>
           </a>
         )}

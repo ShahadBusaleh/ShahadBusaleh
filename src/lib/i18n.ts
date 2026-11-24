@@ -23,6 +23,7 @@ export const ui = {
   en: {
     viewProject: "View on GitHub",
     viewLive: "Live demo",
+    viewVideo: "Demo video",
     about: "About",
     skills: "Skills",
     featuredWork: "Featured Work",
@@ -33,6 +34,7 @@ export const ui = {
     education: "Education",
     training: "Training",
     certifications: "Certifications",
+    community: "Community",
     languages: "Languages",
     sendEmail: "Send Email",
     builtWith: "Built with Next.js & Tailwind CSS",
@@ -46,6 +48,7 @@ export const ui = {
   ar: {
     viewProject: "عرض على GitHub",
     viewLive: "عرض مباشر",
+    viewVideo: "فيديو العرض",
     about: "عني",
     skills: "المهارات",
     featuredWork: "أبرز الأعمال",
@@ -56,6 +59,7 @@ export const ui = {
     education: "التعليم",
     training: "التدريب",
     certifications: "الشهادات",
+    community: "المجتمع",
     languages: "اللغات",
     sendEmail: "إرسال بريد",
     builtWith: "مبني بـ Next.js و Tailwind CSS",
