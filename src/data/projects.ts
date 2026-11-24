@@ -95,7 +95,6 @@ export const projects: Project[] = [
     ],
     category: "ai",
     featured: true,
-    github: "https://github.com/ShahadBusaleh/YusrAgent",
     badge: "Completed — Bootcamp Capstone",
     badgeAr: "مكتمل — مشروع تخرج المعسكر",
   },
