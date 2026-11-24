@@ -263,7 +263,7 @@ export const projects: Project[] = [
     id: "ticket-analytics",
     title: "IT Ticket Data Analysis",
     titleAr: "تحليل بيانات تذاكر IT",
-    role: "IT Trainee — COOP",
+    role: "IT Trainee · Internship (Co-op)",
     roleAr: "متدربة IT",
     description:
       "Analyzed 10 months of IT support ticket data to identify peak periods, seasonal trends, and category relationships — delivering strategic recommendations via interactive Tableau dashboards.",

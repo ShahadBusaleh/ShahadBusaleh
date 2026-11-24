@@ -1,8 +1,8 @@
 export const profile = {
   name: "Shahad Busaleh",
   nameAr: "شهد بوصالح",
-  title: "AI Product Builder",
-  titleAr: "مطوّرة منتجات الذكاء الاصطناعي",
+  title: "AI Engineer",
+  titleAr: "مهندسة ذكاء اصطناعي",
   location: "Eastern Province, Saudi Arabia",
   locationAr: "المنطقة الشرقية، المملكة العربية السعودية",
   email: "shahadbusaleh753@gmail.com",
@@ -12,13 +12,13 @@ export const profile = {
     credly: "https://www.credly.com/users/shahad-busaleh/badges/credly",
   },
   tagline:
-    "I turn business needs into shipped AI products — from multi-agent systems to enterprise tools.",
+    "I build Arabic-first AI products, owning both the engineering and the product decisions behind them.",
   taglineAr:
-    "أحوّل احتياجات الأعمال إلى منتجات ذكاء اصطناعي مُسلَّمة فعليًا — من الأنظمة متعددة الوكلاء إلى الأدوات المؤسسية.",
+    "أبني منتجات ذكاء اصطناعي عربية أولًا، وأتولى قراراتها الهندسية والمنتجية معًا.",
   highlights:
     "AgentX Hackathon Finalist · 1st Place, Rkiza V‑Camp 2026 · Enterprise AI tools deployed",
   highlightsAr:
     "متأهلة لنهائي هاكاثون ⁨AgentX⁩ · المركز الأول في ⁨Rkiza V‑Camp 2026⁩ · أدوات ذكاء اصطناعي مؤسسية منشورة",
-  openTo: "AI Product Manager · AI Engineer · Available immediately · Eastern Province or Riyadh",
-  openToAr: "مديرة منتجات ذكاء اصطناعي · مهندسة ذكاء اصطناعي · متاحة فورًا · المنطقة الشرقية أو الرياض",
+  openTo: "AI Engineer · Technical Product · Available immediately · Eastern Province or Riyadh",
+  openToAr: "مهندسة ذكاء اصطناعي · منتجات تقنية · متاحة فورًا · المنطقة الشرقية أو الرياض",
 };
