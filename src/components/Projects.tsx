@@ -17,7 +17,7 @@ export function Projects() {
       <div className="mx-auto max-w-6xl">
         <Reveal className="mb-12 text-center">
           <h2 className="text-3xl font-bold text-brand-teal-dark sm:text-4xl">
-            {t.featuredWork}
+            {t.selectedWork}
           </h2>
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-brand-teal" />
         </Reveal>
@@ -34,7 +34,7 @@ export function Projects() {
           <>
             <Reveal>
               <h3 className="mb-8 text-center text-2xl font-bold text-brand-teal-dark">
-                {t.allProjects}
+                {t.moreWork}
               </h3>
             </Reveal>
             <div className="grid gap-6 md:grid-cols-2">

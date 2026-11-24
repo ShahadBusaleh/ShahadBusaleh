@@ -3,6 +3,7 @@
 import { useLanguage } from "./LanguageProvider";
 import { ui } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
+import { profile } from "@/data/profile";
 
 const education = {
   en: "B.S. in Computer Information Systems — Imam Abdulrahman Bin Faisal University (Aug 2020 – Aug 2025)",
@@ -47,8 +48,26 @@ const certifications = {
   ],
 };
 
+const bio = {
+  en: "I build AI products that solve real business problems, from understanding the need to shipping a working system. My work spans multi-agent platforms, enterprise workflow tools, and evaluation-driven AI, and I care about outputs that are traceable, safe, and actually used.",
+  ar: "أبني منتجات ذكاء اصطناعي تحل مشكلات أعمال حقيقية، من فهم الاحتياج حتى تسليم نظام يعمل. يمتد عملي بين المنصات متعددة الوكلاء، وأدوات سير العمل المؤسسية، والذكاء الاصطناعي المبني على التقييم، وأهتم بمخرجات يمكن تتبعها، وآمنة، ويستخدمها الناس فعلًا.",
+};
+
+const principles = {
+  en: [
+    { title: "Start from the user's problem", body: "Every project starts with who it's for and what it replaces, not with the model." },
+    { title: "Measure before claiming", body: "Evaluation harnesses, blind human labels, and metrics I can defend." },
+    { title: "Keep humans in control", body: "Risky actions need approval, and the AI says it doesn't know instead of guessing." },
+  ],
+  ar: [
+    { title: "أبدأ من مشكلة المستخدم", body: "كل مشروع يبدأ بسؤال: لمن هو؟ وما الذي يستبدله؟ لا بالنموذج." },
+    { title: "أقيس قبل أن أدّعي", body: "منظومات تقييم، وتصنيفات بشرية عمياء، ومقاييس أستطيع الدفاع عنها." },
+    { title: "الإنسان يبقى صاحب القرار", body: "الإجراءات الحساسة تحتاج موافقة، والذكاء الاصطناعي يقول «لا أعرف» بدل التخمين." },
+  ],
+};
+
 const community = {
-  en: "AI Committee Member, Saudi Developers Community (SDC) — co-presented the 'ويب بلا حدود' AI web-building workshop (Nov 2026).",
+  en: "AI Committee Member, Saudi Developers Community (SDC). Co-presented the AI web-building workshop “Web Without Limits” (⁨ويب بلا حدود⁩), Nov 2026.",
   ar: "عضوة لجنة الذكاء الاصطناعي، المجتمع السعودي للمطورين (SDC) — شاركتُ في تقديم ورشة «ويب بلا حدود» لبناء مواقع الويب بالذكاء الاصطناعي (نوفمبر 2026).",
 };
 
@@ -69,6 +88,36 @@ export function About() {
 
         <div className="mx-auto max-w-2xl space-y-8">
           <Reveal className="space-y-8">
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-brand-teal-dark">
+                {t.aboutMe}
+              </h3>
+              <p className="text-base leading-relaxed text-zinc-700">
+                {bio[locale]}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-xl font-bold text-brand-teal-dark">
+                {t.howIWork}
+              </h3>
+              <ul className="grid gap-3 sm:grid-cols-3">
+                {principles[locale].map((p) => (
+                  <li
+                    key={p.title}
+                    className="rounded-xl border border-brand-teal/15 bg-zinc-50 p-4"
+                  >
+                    <p className="mb-1 text-sm font-semibold text-brand-teal-dark">
+                      {p.title}
+                    </p>
+                    <p className="text-sm leading-relaxed text-zinc-600">
+                      {p.body}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             <div>
               <h3 className="mb-4 text-xl font-bold text-brand-teal-dark">
                 {t.education}
@@ -109,6 +158,15 @@ export function About() {
                   </li>
                 ))}
               </ul>
+              <a
+                href={profile.links.credly}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-teal hover:text-brand-teal-dark"
+              >
+                {locale === "en" ? "Verify on Credly" : "التحقق عبر Credly"}
+                <span aria-hidden className="rtl:rotate-180">→</span>
+              </a>
             </div>
 
             <div>
