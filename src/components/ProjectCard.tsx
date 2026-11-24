@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import type { Project } from "@/data/projects";
 import { useLanguage } from "./LanguageProvider";
 import { ui } from "@/lib/i18n";
@@ -66,6 +67,15 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
       </div>
 
       <div className="flex flex-wrap gap-4">
+        {project.caseStudy && (
+          <Link
+            href={`/work/${project.caseStudy}`}
+            className="inline-flex items-center gap-2 rounded-full bg-brand-teal px-4 py-2 text-sm font-semibold text-brand-cream transition-colors hover:bg-brand-teal-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal"
+          >
+            {t.readCaseStudy}
+            <span aria-hidden className="rtl:rotate-180">→</span>
+          </Link>
+        )}
         {project.live && (
           <a
             href={project.live}
@@ -82,7 +92,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-teal transition-colors hover:text-brand-teal-dark"
+            className="inline-flex items-center gap-2 py-2 text-sm font-semibold text-brand-teal transition-colors hover:text-brand-teal-dark"
           >
             {t.viewProject}
             <span aria-hidden>→</span>

@@ -17,6 +17,7 @@ export type Project = {
   live?: string;
   badge?: string;
   badgeAr?: string;
+  caseStudy?: string;
 };
 
 export const projects: Project[] = [
@@ -24,25 +25,21 @@ export const projects: Project[] = [
     id: "sada",
     title: "Sada (صدى) — Multi-Agent Audience Intelligence Platform",
     titleAr: "صدى (Sada) — منصة ذكاء الجمهور متعددة الوكلاء",
-    role: "AgentX Hackathon — Backend & AI Agents | Team Project, continued independently",
-    roleAr: "هاكاثون AgentX — الخلفية ووكلاء الذكاء الاصطناعي | مشروع فريق، استكملتُ تطويره بشكل مستقل",
+    role: "Backend & AI Agents · Team of 4, continued independently",
+    roleAr: "الخلفية ووكلاء الذكاء الاصطناعي · فريق من 4، واستكملتُ تطويره بشكل مستقل",
     description:
-      "A multi-agent AI platform that turns audience data from the Saudi Broadcasting Authority's official YouTube, X and Instagram accounts into content decisions: what to publish, where, when, and why a post over- or under-performed. Live Arabic (RTL) dashboard.",
+      "Turns audience data from official YouTube, X and Instagram accounts into content decisions: what to publish, where, when, and why a post over- or under-performed.",
     descriptionAr:
-      "منصة ذكاء اصطناعي متعددة الوكلاء تحوّل بيانات الجمهور من حسابات هيئة الإذاعة والتلفزيون الرسمية على YouTube وX وInstagram إلى قرارات محتوى: ماذا يُنشر، وأين، ومتى، ولماذا تفوّق منشور على المتوقع أو قصّر عنه. لوحة معلومات عربية (RTL) مباشرة.",
+      "تحوّل بيانات الجمهور من الحسابات الرسمية على YouTube وX وInstagram إلى قرارات محتوى: ماذا يُنشر، وأين، ومتى، ولماذا تفوّق منشور أو قصّر.",
     highlights: [
-      "7 agents sharing one database and pattern store: Data Collector, Behavior Analysis, Content Optimizer, Trend & Viral Prediction, Alerts & Diagnosis, Audience Analysis, Live Clip Detection (prototype on a simulated signal)",
-      "Real data: 15K+ posts from 19 official accounts (incl. 7.7K YouTube videos with ~95M views) and 2.5K audience comments; no author data stored",
-      "Evidence-first: every pattern cites its sample size and t-test; diagnoses link to real comparable posts and never invent a cause",
-      "Saudi-dialect audience analysis: 94% agreement with blind human labels",
-      "My role — Hackathon: backend, AI agents, and platform API integration (YouTube, X, Instagram). After the hackathon, I continued development independently: production deployment (Render + Supabase Postgres), Supabase Auth, multi-tenant data isolation, Alembic migrations, and CI on SQLite and Postgres.",
+      "7 agents on real data: 15K+ posts from 19 official accounts",
+      "Evidence-first: significant patterns only, no invented causes",
+      "Saudi-dialect audience analysis, measured against blind human labels",
     ],
     highlightsAr: [
-      "7 وكلاء يتشاركون قاعدة بيانات واحدة ومخزن أنماط: جامع البيانات، وتحليل السلوك، ومحسّن المحتوى، والتنبؤ بالترند والانتشار، والتنبيهات والتشخيص، وتحليل الجمهور، واكتشاف المقاطع المباشرة (نموذج أولي على إشارة محاكاة)",
-      "بيانات حقيقية: أكثر من 15 ألف منشور من 19 حسابًا رسميًا (منها 7.7 ألف فيديو على YouTube بنحو 95 مليون مشاهدة) و2.5 ألف تعليق من الجمهور؛ دون تخزين أي بيانات عن أصحابها",
-      "الدليل أولًا: كل نمط يذكر حجم العينة واختبار t، والتشخيصات ترتبط بمنشورات حقيقية مماثلة ولا تختلق سببًا أبدًا",
-      "تحليل الجمهور باللهجة السعودية: توافق بنسبة 94% مع تصنيفات بشرية معمّاة",
-      "دوري — في الهاكاثون: الخلفية، ووكلاء الذكاء الاصطناعي، وتكامل واجهات المنصات البرمجية (YouTube وX وInstagram). بعد الهاكاثون واصلتُ التطوير بشكل مستقل: النشر في بيئة الإنتاج (Render + Supabase Postgres)، وSupabase Auth، وعزل بيانات متعدد المستأجرين (Multi-tenant)، وترحيلات Alembic، والتكامل المستمر (CI) على SQLite وPostgres.",
+      "7 وكلاء على بيانات حقيقية: أكثر من 15 ألف منشور من 19 حسابًا رسميًا",
+      "الدليل أولًا: أنماط ذات دلالة إحصائية فقط، ولا أسباب مختلقة",
+      "تحليل الجمهور باللهجة السعودية، مقاس مقابل تصنيفات بشرية عمياء",
     ],
     stack: [
       "Python",
@@ -60,28 +57,27 @@ export const projects: Project[] = [
     featured: true,
     badge: "AgentX Hackathon Finalist (3rd Edition)",
     badgeAr: "متأهلة لنهائي هاكاثون AgentX (النسخة الثالثة)",
+    caseStudy: "sada",
   },
   {
     id: "yusor",
     title: "Yusor — Bilingual Multi-Agent HR Assistant",
     titleAr: "يُسر — مساعد موارد بشرية متعدد الوكلاء ثنائي اللغة",
-    role: "Agentic AI Bootcamp Capstone (SDA & WeCloudData) — Repo Owner | Team of 4",
-    roleAr: "مشروع تخرج معسكر Agentic AI (SDA و WeCloudData) — مالكة المستودع | فريق من 4",
+    role: "Bootcamp Capstone (SDA & WeCloudData) · Repo owner · Team of 4",
+    roleAr: "مشروع تخرج المعسكر (SDA وWeCloudData) · مالكة المستودع · فريق من 4",
     description:
-      "An Arabic/English HR assistant that answers from the HR database and Saudi Labor Law, cites its sources, verifies every answer before the user sees it, and keeps risky actions under human approval.",
+      "An Arabic/English HR assistant that answers from the HR database and Saudi Labor Law, cites its sources, and keeps risky actions under human approval.",
     descriptionAr:
-      "مساعد موارد بشرية بالعربية والإنجليزية يجيب من قاعدة بيانات الموارد البشرية ونظام العمل السعودي، ويستشهد بمصادره، ويتحقق من كل إجابة قبل أن تصل للمستخدم، ويُبقي الإجراءات الحساسة تحت الموافقة البشرية.",
+      "مساعد موارد بشرية بالعربية والإنجليزية يجيب من قاعدة بيانات الموارد البشرية ونظام العمل السعودي، ويذكر مصادره، ويُبقي الإجراءات الحساسة تحت الموافقة البشرية.",
     highlights: [
-      "Orchestrator, HR, Consultant and Manager agents, plus specialists for regulation updates, decision briefs, CV parsing and growth plans",
-      "Hybrid RAG (Qdrant + BM25 + Reciprocal Rank Fusion) over 176 policy and Labor Law documents, with cited sources",
-      "Results: Ragas faithfulness 0.94, context recall 0.91, 54/54 golden test cases, 158 unit tests passing",
-      "My role: Owned the repository, coordinated how work was split across a team of four, co-led the evaluation harness (Ragas + LLM-as-judge), built the Arabic experience, Team Insights, and the payroll feature, and curated the policy knowledge base.",
+      "Faithfulness 0.94 · context recall 0.91 · 54/54 golden cases",
+      "Hybrid RAG over 176 policy and Labor Law documents, with citations",
+      "Human approval for risky actions; every answer verified before the user sees it",
     ],
     highlightsAr: [
-      "وكلاء المنسّق والموارد البشرية والمستشار والمدير، إضافة إلى وكلاء متخصصين لتحديثات الأنظمة وملخصات القرار وتحليل السير الذاتية وخطط النمو",
-      "RAG هجين (Qdrant + BM25 + Reciprocal Rank Fusion) على 176 وثيقة سياسات ونظام عمل، مع ذكر المصادر",
-      "النتائج: Ragas faithfulness بنسبة 0.94، وcontext recall بنسبة 0.91، ونجاح 54/54 حالة اختبار مرجعية، ونجاح 158 اختبار وحدة",
-      "دوري: ملكية المستودع، وتنسيق توزيع العمل على فريق من أربعة، والمشاركة في قيادة منظومة التقييم (Ragas + LLM-as-judge)، وبناء التجربة العربية وميزة رؤى الفريق (Team Insights) وميزة الرواتب، وإعداد قاعدة معرفة السياسات.",
+      "Faithfulness ‏0.94 · context recall ‏0.91 · نجاح 54/54 حالة مرجعية",
+      "RAG هجين على 176 وثيقة سياسات ونظام عمل، مع ذكر المصادر",
+      "موافقة بشرية على الإجراءات الحساسة، وتحقق من كل إجابة قبل وصولها للمستخدم",
     ],
     stack: [
       "Python",
@@ -95,8 +91,10 @@ export const projects: Project[] = [
     ],
     category: "ai",
     featured: true,
+    github: "https://github.com/ShahadBusaleh/YusrAgent",
     badge: "Completed — Bootcamp Capstone",
     badgeAr: "مكتمل — مشروع تخرج المعسكر",
+    caseStudy: "yusor",
   },
   {
     id: "travel-in",
@@ -135,7 +133,7 @@ export const projects: Project[] = [
       "Zod",
     ],
     category: "ai",
-    featured: true,
+    featured: false,
     badge: "1st Place",
     badgeAr: "المركز الأول",
   },
@@ -143,23 +141,21 @@ export const projects: Project[] = [
     id: "meeting-assistant",
     title: "AI Meeting Assistant",
     titleAr: "مساعد الاجتماعات الذكي",
-    role: "Enterprise Integration & Full-Stack Delivery",
-    roleAr: "تكامل مؤسسي وتطوير Full Stack",
+    role: "Khalifa A. Algosaibi Group · Designed and built end to end",
+    roleAr: "مجموعة خليفة أ. القصيبي · تصميم وبناء كامل",
     description:
-      "Enterprise web app for recording meetings, live transcription, AI summaries, formal meeting minutes documents, PDF export, and Microsoft Graph email — integrated into a corporate IT portal with Entra ID SSO via YARP reverse proxy.",
+      "Records meetings and produces AI summaries and formal minutes on a local LLM, inside the corporate IT portal, so meeting content never leaves company servers.",
     descriptionAr:
-      "تطبيق مؤسسي لتسجيل الاجتماعات والنسخ المباشر والملخصات بالذكاء الاصطناعي ومحاضر الاجتماعات الرسمية وتصدير PDF والبريد عبر Microsoft Graph — مدمج في بوابة IT مع تسجيل دخول موحد عبر YARP.",
+      "يسجّل الاجتماعات ويُنتج ملخصات ومحاضر رسمية بنموذج لغوي محلي من داخل بوابة IT المؤسسية، فلا يغادر محتوى الاجتماعات خوادم الشركة.",
     highlights: [
-      "Two-server Windows architecture: ASP.NET portal + Next.js/FastAPI stack",
-      "SSO without second login — YARP injects X-User headers from Entra ID",
-      "Local LM Studio summarization with browser-side transcription path",
-      "Production troubleshooting: 502 gateway, transcript persistence, template routing",
+      "Privacy-first: local LLM (LM Studio), no third-party cloud",
+      "No second login: Microsoft Entra ID SSO through a YARP reverse proxy",
+      "Formal minutes from templates, PDF export, and email via Microsoft Graph",
     ],
     highlightsAr: [
-      "بنية Windows ثنائية الخوادم: بوابة ASP.NET + Next.js/FastAPI",
-      "تسجيل دخول موحد بدون تسجيل ثانٍ عبر YARP و Entra ID",
-      "تلخيص محلي عبر LM Studio مع مسار نسخ في المتصفح",
-      "حل مشاكل إنتاج: 502، حفظ النصوص، مسارات القوالب",
+      "الخصوصية أولًا: نموذج لغوي محلي (LM Studio) دون أي سحابة خارجية",
+      "بدون تسجيل دخول ثانٍ: Microsoft Entra ID عبر وسيط YARP",
+      "محاضر رسمية من قوالب، وتصدير PDF، وبريد عبر Microsoft Graph",
     ],
     stack: [
       "Next.js",
@@ -172,8 +168,9 @@ export const projects: Project[] = [
     ],
     category: "enterprise",
     featured: true,
-    badge: "Production",
-    badgeAr: "قيد التشغيل",
+    badge: "Deployed",
+    badgeAr: "منشور",
+    caseStudy: "meeting-assistant",
   },
   {
     id: "equipment",
@@ -206,8 +203,6 @@ export const projects: Project[] = [
     ],
     category: "enterprise",
     featured: false,
-    badge: "Enterprise",
-    badgeAr: "مؤسسي",
   },
   {
     id: "research-mission",

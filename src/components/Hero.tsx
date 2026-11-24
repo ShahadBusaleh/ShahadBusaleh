@@ -22,7 +22,7 @@ export function Hero() {
         <div className="hero-animate shrink-0" style={{ animationDelay: "0ms" }}>
           <div className="relative mx-auto h-44 w-44 overflow-hidden rounded-[1.75rem] ring-2 ring-brand-cream/35 shadow-[0_20px_50px_-20px_rgba(26,47,53,0.55)] sm:h-52 sm:w-52 lg:h-64 lg:w-64">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/profile.png`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/profile.webp`}
               alt={locale === "en" ? profile.name : profile.nameAr}
               width={512}
               height={512}
@@ -85,10 +85,11 @@ export function Hero() {
           </div>
 
           <p
-            className="hero-animate text-sm text-brand-cream/60"
+            className="hero-animate text-sm text-brand-cream/85"
             style={{ animationDelay: "520ms" }}
           >
-            {locale === "en" ? profile.location : profile.locationAr}
+            <span className="font-semibold text-brand-cream">{t.openTo}:</span>{" "}
+            {locale === "en" ? profile.openTo : profile.openToAr}
           </p>
         </div>
       </div>

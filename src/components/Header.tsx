@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Logo } from "./Logo";
 import { useLanguage } from "./LanguageProvider";
 import { navItems } from "@/lib/i18n";
@@ -8,7 +9,7 @@ import { navItems } from "@/lib/i18n";
 export function Header() {
   const { locale, toggleLocale } = useLanguage();
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("home");
+  const [active, setActive] = useState("");
   const items = navItems[locale];
 
   useEffect(() => {
@@ -42,8 +43,8 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-brand-teal/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a
-          href="#home"
+        <Link
+          href="/#home"
           className="flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-cream"
           onClick={() => setOpen(false)}
         >
@@ -51,7 +52,7 @@ export function Header() {
           <span className="hidden text-sm font-semibold tracking-wide text-brand-cream sm:block">
             Shahad Busaleh
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {items.map((item) => {
@@ -59,9 +60,9 @@ export function Header() {
             const isActive = active === id;
 
             return (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
+                href={`/${item.href}`}
                 className={`relative text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-cream ${
                   isActive
                     ? "text-brand-cream"
@@ -76,7 +77,7 @@ export function Header() {
                   }`}
                   aria-hidden
                 />
-              </a>
+              </Link>
             );
           })}
         </nav>
@@ -123,9 +124,9 @@ export function Header() {
             const isActive = active === id;
 
             return (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
+                href={`/${item.href}`}
                 className={`text-sm font-medium transition-colors ${
                   isActive ? "text-brand-cream" : "text-brand-cream/75"
                 }`}
@@ -133,7 +134,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             );
           })}
         </div>

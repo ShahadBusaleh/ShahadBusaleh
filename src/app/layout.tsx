@@ -17,29 +17,42 @@ const notoArabic = Noto_Sans_Arabic({
   weight: ["400", "500", "600", "700"],
 });
 
+const SITE_URL = "https://shahadbusaleh.github.io/ShahadBusaleh/";
+const OG_IMAGE = `${SITE_URL}og.jpg`;
+const DESCRIPTION =
+  "AI Product Builder in Saudi Arabia turning business needs into shipped AI products, from multi-agent systems to enterprise tools. AgentX Hackathon finalist and Rkiza V-Camp 2026 winner.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Shahad Busaleh — AI Product Builder",
-  description:
-    "Portfolio of Shahad Busaleh — AI Product Builder turning business needs into shipped AI products, from multi-agent systems to enterprise tools.",
+  description: DESCRIPTION,
   keywords: [
     "Shahad Busaleh",
     "AI Product Builder",
-    "AI Product",
+    "AI Product Manager",
+    "AI Engineer",
     "Agentic AI",
     "Multi-Agent Systems",
-    "LangChain",
     "RAG",
-    "Full Stack",
-    "Next.js",
-    "ASP.NET",
     "Saudi Arabia",
   ],
   authors: [{ name: "Shahad Busaleh" }],
+  alternates: { canonical: SITE_URL },
   openGraph: {
     title: "Shahad Busaleh — AI Product Builder",
     description:
       "I turn business needs into shipped AI products — from multi-agent systems to enterprise tools.",
+    url: SITE_URL,
+    siteName: "Shahad Busaleh",
     type: "website",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Shahad Busaleh — AI Product Builder" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shahad Busaleh — AI Product Builder",
+    description:
+      "I turn business needs into shipped AI products — from multi-agent systems to enterprise tools.",
+    images: [OG_IMAGE],
   },
 };
 
