@@ -14,11 +14,11 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
         <div className="flex items-center gap-3">
           <Logo size="sm" onTeal />
-          <p className="text-sm text-brand-cream/70">
+          <p className="text-sm text-brand-cream/85">
             © {year} Shahad Busaleh
           </p>
         </div>
-        <p className="text-xs text-brand-cream/50">{t.builtWith}</p>
+        <p className="text-xs text-brand-cream/75">{t.builtWith}</p>
       </div>
     </footer>
   );
